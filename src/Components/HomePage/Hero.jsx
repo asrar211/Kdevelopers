@@ -8,7 +8,7 @@ const Hero = () => {
     <Background/>
     <div className='mt-10 text-center'>
     <div className='min-[900px]:hidden w-[15rem] h-[15rem] bg-yellow-500 absolute translate-x-[50%] translate-y-[-50%] top-[0%] left-[0%] z-[-1] blur-[4rem] rounded-full'></div>
-    <div className='min-[900px]:hidden w-[15rem] h-[15rem] bg-blue-800 absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] z-[-1] blur-[4rem] rounded-full'></div>
+    <div className='min-[900px]:hidden w-[25rem] h-[25rem] bg-blue-800 absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] z-[-1] blur-[4rem] rounded-full'></div>
     {/* <div className='min-[900px]:hidden w-[15rem] h-[15rem] bg-yellow-500 absolute translate-x-[-50%] translate-y-[-50%] top-[0%] left-[100%] z-[-1] blur-[6rem] rounded-full'></div> */}
     <div>
       <h1 className='max-[900px]:text-xl min-[900px]:text-[4rem] font-semibold min-[900px]:mt-16 my-5 max-[900px]:text-black text-white'>We Make Everything Look <br /> As Good As You Want</h1>
