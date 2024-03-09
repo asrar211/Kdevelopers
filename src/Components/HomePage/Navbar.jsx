@@ -30,25 +30,25 @@ const Navbar = () => {
 
     {/* //for mobile phones  */}
     <div className='flex justify-between items-center my-4 mx-5 min-[900px]:hidden'>
-      <h2 className='text-xl text-white '>Kdevs.</h2>
+      <h2 className='text-xl text-black '>Kdevs.</h2>
       <div className='flex gap-5 items-center justify-center'>
-        <div className='text-white'>Icon</div>
+        <div className='text-black'>Icon</div>
         {!isMenuOpen ? (
           <div onClick={handleClick} className='flex flex-col gap-1 items-end '>
-            <div className='w-[20px] ease-in duration-300 h-[3px] bg-white/90'></div>
-            <div className='w-[20px] ease-in duration-300 h-[3px] bg-white/90'></div>
-            <div className='w-[20px] ease-in duration-300 h-[3px] bg-white/90'></div>
+            <div className='w-[20px] ease-in duration-300 h-[3px] bg-black/90'></div>
+            <div className='w-[20px] ease-in duration-300 h-[3px] bg-black/90'></div>
+            <div className='w-[20px] ease-in duration-300 h-[3px] bg-black/90'></div>
           </div>
         ) : (     
           <div onClick={handleClick}  className=' flex flex-col items-end mb-[3px]'>
-            <div className='w-[20px] h-[3px] ease-in duration-300 bg-white/90 rotate-45 translate-y-[3px]'></div>
-            <div className='w-[20px] h-[3px] ease-in duration-300 bg-white/90 rotate-[-45deg]'></div>
+            <div className='w-[20px] h-[3px] ease-in duration-300 bg-black/90 rotate-45 translate-y-[3px]'></div>
+            <div className='w-[20px] h-[3px] ease-in duration-300 bg-black/90 rotate-[-45deg]'></div>
           </div>
         )}
       </div>
     </div>
 
-     <div className={`min-[900px]:hidden ${isOpen ? 'bg-black/50' : 'hidden'}`}>
+     <div className={`min-[900px]:hidden ${isOpen ? 'bg-black/80' : 'hidden'}`}>
       <div className='flex flex-col gap-3 py-5 items-center text-white '>
         <h4 className='ease-in duration-500 hover:underline cursor-pointer'>Works</h4>
         <h4 className='ease-in duration-500 hover:underline cursor-pointer'>Services</h4>

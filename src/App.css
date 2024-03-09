@@ -17,7 +17,7 @@ body{
 @media screen and (max-width: 900px) {
     body {
         height: 100vh;
-        background: rgb(83, 83, 179);
-        background: linear-gradient(132deg, rgba(79, 79, 136,1) 0%, rgba(0,0,0,1) 100%);
+        background: #fff;
+        color: #000;
     }
 }
