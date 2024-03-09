@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CiDark, CiLight } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
     <div className='flex justify-between items-center my-4 mx-5 min-[900px]:hidden'>
       <h2 className='text-xl text-black '>Kdevs.</h2>
       <div className='flex gap-5 items-center justify-center'>
-        <div className='text-black'><CiDark size={25}/></div>
+        <div className='text-black'><CgProfile size={25}/></div>
         {!isMenuOpen ? (
           <div onClick={handleClick} className='flex flex-col gap-1 items-end '>
             <div className='w-[20px] ease-in duration-300 h-[3px] bg-black/90'></div>
