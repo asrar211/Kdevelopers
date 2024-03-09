@@ -1,5 +1,6 @@
 import React from 'react'
 import Background from '../Background'
+import img1 from "../../../public/assets/img1.png"
 
 const Hero = () => {
   return (
@@ -11,6 +12,9 @@ const Hero = () => {
       min-[900px]:mx-[20rem] mx-16 opacity-90 text-black/90 my-3'>Our Products seek to immersive extended reality experience that inspire  and westruck first time and experienced user alike.</p>
       <button className='mt-10 bg-white/70 p-2 mx-2 text-sm font-semibold '>Contact Us -> </button>
       <button className='bg-black/40 p-2 text-sm mx-2 text-white font-semibold'>Learn More</button>
+    </div>
+    <div>
+      <img src={img1} alt="" />
     </div>
     </>
   )
