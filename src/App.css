@@ -14,10 +14,3 @@ body{
     background-color: rgb(22, 20, 20);
 }
 
-@media screen and (max-width: 900px) {
-    body {
-        background: url("https://i.pinimg.com/564x/0c/84/3f/0c843f96a6e997fff64e65057100b4af.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
