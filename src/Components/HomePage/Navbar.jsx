@@ -1,72 +1,43 @@
-import React, { useState } from 'react'
-import {Link} from "react-router-dom"
-
+import React from 'react'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-    setIsMenuOpen(!isOpen);
-  };
-
   return (
-    <>
-    <div className='max-[768px]:hidden'>
-     <div className='flex justify-around items-center rounded-full my-4 text-white bg-[rgba(0,0,0,0.3)] sm:w-[50%] ml-[42%] py-2'>
-      <Link to="/"><h2 className='text-[20px] text-white drop-shadow-2xl px-3 cursor-pointer py-1 hover:text-blue-900 ease-in duration-300'>Kdevs</h2></Link>
-      <h4 className='text-[15px] hover:bg-white hover:text-black ease-in duration-500 px-3 cursor-pointer py-1 rounded-full'>Works</h4>
-      <h4 className='text-[15px] hover:bg-white hover:text-black ease-in duration-500 px-3 cursor-pointer py-1 rounded-full'>Services</h4>
-      <h4 className='text-[15px] hover:bg-white hover:text-black ease-in duration-500 px-3 cursor-pointer py-1 rounded-full'>Support</h4>
-      <Link to='/signin'><h4 className='text-[15px] bg-white text-black hover:bg-[rgba(0,0,0,0.7)] hover:text-white ease-in duration-300 px-3 cursor-pointer py-1 rounded-full'>SignIn</h4></Link>
+     <>
+    {/* // bigger screens */}
+    <div className='max-[980px]:hidden flex justify-between min-[900px]:px-10 items-center shadow-lg min-[900px]:py-4 backdrop-blur-xl bg-black/40 min-[900px]:mx-[8rem] rounded-full mt-3'>
+      <div className='flex justify-start min-[768px]:gap-20 items-center'>
+        <h2 className='text-white py-1 px-2 cursor-pointer'>Kdevs. <span className='ml-10'> | </span></h2>
+        <h4 className='text-white py-1 px-2 hover:bg-white/90 hover:text-black ease-in duration-300 cursor-pointer rounded-full '>Works</h4>
+        <h4 className='text-white py-1 px-2 hover:bg-white/90 hover:text-black ease-in duration-300 cursor-pointer rounded-full '>Services</h4>
+        <h4 className='text-white py-1 px-2 hover:bg-white/90 hover:text-black ease-in duration-300 cursor-pointer rounded-full '>Support</h4>
+      </div>
+      <div>
+        <h4 className=' py-1 px-2 bg-white/90 cursor-pointer hover:bg-black/40 hover:text-white ease-in duration-300 rounded-full text-black'>SignIn</h4>
+      </div>
+    </div>
+
+    {/* //for mobile phones  */}
+    <div className='flex justify-between items-center my-4 mx-5 min-[900px]:hidden'>
+    <h2 className='text-xl text-white '>Kdevs.</h2>
+    <div className='flex flex-col gap-1 items-end '>
+      <div className='w-[20px] h-[3px] bg-white/90'></div>
+      <div className='w-[20px] h-[3px] bg-white/90'></div>
+      <div className='w-[20px] h-[3px] bg-white/90'></div>
      </div>
     </div>
 
-    {/* //hamburger menu */}
-    <div onClick={handleClick}>
-        {isMenuOpen ? (
-        <div className='min-[768px]:hidden flex flex-col justify-center items-center my-4 bg-[rgba(0,0,0,0.3)] w-[20%] ml-[55%] py-2 rounded-full'>
-        <div className='w-[20px] rotate-45 translate-y-[6px] ease-in duration-300 bg-white h-[3px] mb-[3px]'> </div>
-        <div className='w-[20px] rotate-[-45deg] ease-in duration-300  bg-white h-[3px] mb-[3px]'> </div>
-        </div>
-        ) : (
-          <div className='min-[768px]:hidden flex flex-col justify-center items-center my-4 bg-[rgba(0,0,0,0.3)] w-[20%] ml-[55%] py-2 rounded-full'>
-          <div className='w-[20px] ease-in duration-300 bg-white h-[3px]  mb-[3px]'> </div>
-          <div className='w-[20px] ease-in duration-300 bg-white h-[3px] mb-[3px]'> </div>
-          <div className='w-[20px] ease-in duration-300 bg-white h-[3px] mb-[3px]'> </div>
-          </div>
-        )}
-        </div>
-
-   {/* for mobile screens */}
-         {isOpen && (
-        <div>
-        <div className='min-[768px]:hidden w-[100vw]'>
-     <div className='flex flex-col justify-around items-center gap-4 my-4 text-white bg-[rgba(0,0,0,0.3)] py-2'>
-      <Link to="/"><h2 className='text-[25px] underline text-white drop-shadow-2xl px-3 cursor-pointer py-1 '>Kdevs</h2></Link>
-      <h4 className='text-[15px] hover:bg-white hover:text-black ease-in duration-500 px-3 cursor-pointer py-1 rounded-full'>Works</h4>
-      <h4 className='text-[15px] hover:bg-white hover:text-black ease-in duration-500 px-3 cursor-pointer py-1 rounded-full'>Services</h4>
-      <h4 className='text-[15px] hover:bg-white hover:text-black ease-in duration-500 px-3 cursor-pointer py-1 rounded-full'>Support</h4>
-      <Link to='/signin'><h4 className='text-[15px] bg-white text-black hover:bg-[rgba(0,0,0,0.7)] hover:text-white ease-in duration-300 px-3 cursor-pointer py-1 rounded-full'>SignIn</h4></Link>
-      <p className='text-sm opacity-70'>@Kdevelopers</p>
+     <div className='min-[900px]:hidden bg-black/50'>
+      <div className='flex flex-col gap-3 py-5 items-center text-white'>
+        <h4 className='ease-in duration-500 hover:underline cursor-pointer'>Works</h4>
+        <h4 className='ease-in duration-500 hover:underline cursor-pointer'>Services</h4>
+        <h4 className='ease-in duration-500 hover:underline cursor-pointer'>Support</h4>
+      </div>
+      <div className='flex flex-col items-center text-white py-2'>
+        <h4>SignIn</h4>
+      </div>
      </div>
-    </div>
-    </div>
-    )}
     </>
   )
 }
-
-const NavLink = ({ to, text }) => {
-  return (
-    <Link
-      to={to}
-      className="text-white hover:text-gray-300 transition duration-1000"
-    >
-      {text}
-    </Link>
-  );
-};
 
 export default Navbar
