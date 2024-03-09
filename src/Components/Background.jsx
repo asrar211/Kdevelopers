@@ -1,5 +1,5 @@
 import React from 'react'
-import v1 from "../../public/assets/v1.mp4"
+
 
 const Background = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import Background from '../Background'
-import img1 from "../../../public/assets/img1.png"
+import img1 from "../../assets/img1.png"
 
 const Hero = () => {
   return (
