@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+ 
+  const handleClick = ()=> {
+    setIsOpen(!isOpen);
+    
+  }
   return (
      <>
     {/* // bigger screens */}
@@ -19,14 +25,17 @@ const Navbar = () => {
     {/* //for mobile phones  */}
     <div className='flex justify-between items-center my-4 mx-5 min-[900px]:hidden'>
     <h2 className='text-xl text-white '>Kdevs.</h2>
-    <div className='flex flex-col gap-1 items-end '>
+    <div className='flex gap-5 items-center justify-center'>
+    <div className='text-white'>Icon</div>
+    <div onClick={handleClick} className='flex flex-col gap-1 items-end '>
       <div className='w-[20px] h-[3px] bg-white/90'></div>
       <div className='w-[20px] h-[3px] bg-white/90'></div>
       <div className='w-[20px] h-[3px] bg-white/90'></div>
      </div>
     </div>
+    </div>
 
-     <div className='min-[900px]:hidden bg-black/50'>
+     <div className={`min-[900px]:hidden ${isOpen ? 'bg-black/50' : 'hidden'}`}>
       <div className='flex flex-col gap-3 py-5 items-center text-white'>
         <h4 className='ease-in duration-500 hover:underline cursor-pointer'>Works</h4>
         <h4 className='ease-in duration-500 hover:underline cursor-pointer'>Services</h4>
