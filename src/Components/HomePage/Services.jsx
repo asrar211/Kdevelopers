@@ -6,8 +6,10 @@ import { GrCloudSoftware } from "react-icons/gr";
 const Services = () => {
   return (
     <div className='mt-10'>
+        <div className='w-[50%] h-[100vh] absolute bg-yellow-300 translate-x-[50%] translate-y-[20%] blur-[3rem] z-[-1]'></div>
         <div className='text-center'>
-            <h2 className='text-xl font-bold '>Services we Provide</h2>
+
+            <h2 className='text-[1.6rem] font-bold '>Services we Provide</h2>
             <p className='mx-20 mt-5 text-sm '>We are redefining the way the world communicated. Works and Works. </p>
         </div>
 
